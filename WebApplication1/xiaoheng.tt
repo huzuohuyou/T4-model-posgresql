@@ -15,10 +15,15 @@
 <# var manager = Manager.Create(Host, GenerationEnvironment); #> 
 
 <# 
-ModelManager mmanager = new ModelManager();
-string tableName="product";
-DataTable fields= mmanager.GetColumn(tableName);
-manager.StartNewFile("Employee.generated.cs"); #>  
+	ModelManager mmanager = new ModelManager();
+	string tableName="product";
+	DataTable tables = mmanager.GetTable();
+    foreach (DataRow item in tables.Rows)
+    {
+		string tablename=item["tableName"].ToString();
+		DataTable fields= mmanager.GetColumn(tablename);
+		manager.StartNewFile(tablename+".cs"); 
+#>  
 /* ****************************************************************************************
  * 版权所有：吴海龙
  * 用    途：数据传输对象(DTO)
@@ -61,8 +66,12 @@ namespace xiaoheng.pos.Model
 }
 
 
-<# manager.EndBlock(); #>  
-<# manager.Process(true); #>
+<#   
+	}
+	manager.EndBlock();  
+	manager.Process(true); 
+#>
+
 <#+
     public class ModelManager
     {
