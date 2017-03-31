@@ -51,8 +51,9 @@ namespace xiaoheng.pos.Model
     #>
 	/// <summary>
         /// <#=row["field"]#>
+		/// <#=row["type"]#>
         /// </summary>
-        public <#=TransFromSqlType(row["type"])#>{get;set;}
+        public <#=mmanager.TransFromSqlType(row["type"].ToString(),"")#> <#=mmanager.FixField(row["field"].ToString())#> {get;set;}
     <#}
     #>
     #endregion
@@ -63,9 +64,6 @@ namespace xiaoheng.pos.Model
 <# manager.EndBlock(); #>  
 <# manager.Process(true); #>
 <#+
-
-  
-
     public class ModelManager
     {
         /// <summary>
@@ -168,6 +166,10 @@ namespace xiaoheng.pos.Model
             }
         }
 
+		///
+		public string FixField(string field){
+			return field.Substring(0,1).ToUpper()+field.Substring(1);
+		}
        
         /// <summary>
         /// SQL
@@ -200,7 +202,7 @@ namespace xiaoheng.pos.Model
 				case "char":
 					typeStr="char";
 					break;
-				case "decimal":
+				case "numeric":
 					typeStr="decimal";
 					break;
 				case "varchar":
