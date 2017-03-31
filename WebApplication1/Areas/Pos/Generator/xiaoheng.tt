@@ -22,7 +22,7 @@
 	string projectPath = Host.ResolveAssemblyReference("$(ProjectDir)");  
     foreach (DataRow item in tables.Rows)
     {
-		string tablename=item["tableName"].ToString();
+		string tablename=mmanager.FirstChar2Upper(item["tableName"].ToString());
 		DataTable fields= mmanager.GetColumn(tablename);
 		manager.StartNewFile(projectPath+"\\Areas\\Pos\\Models\\"+tablename+".cs"); 
 		//manager.StartNewFile(tablename+".cs"); 
@@ -50,7 +50,7 @@ namespace xiaoheng.pos.Model
     /// <summary>
     /// <#= item["tableName"].ToString() #>
     /// </summary>
-    public class <#= item["tableName"].ToString() #>
+    public class <#= mmanager.FirstChar2Upper(item["tableName"].ToString()) #>
     {
         #region 属性
     <#
@@ -61,7 +61,7 @@ namespace xiaoheng.pos.Model
 		/// name：row["field"].ToString()
 		/// type：row["type"].ToString()
 		/// </summary>
-        public <#=mmanager.TransFromSqlType(row["type"].ToString(),"")#> <#=mmanager.FixField(row["field"].ToString())#> { get; set; }
+        public <#=mmanager.TransFromSqlType(row["type"].ToString(),"")#> <#=mmanager.FirstChar2Upper(row["field"].ToString())#> { get; set; }
     <#}
     #>
     #endregion
@@ -182,8 +182,8 @@ namespace xiaoheng.pos.Model
         }
 
 		///
-		public string FixField(string field){
-			return field.Substring(0,1).ToUpper()+field.Substring(1);
+		public string FirstChar2Upper(string content){
+			return content.Substring(0,1).ToUpper()+content.Substring(1);
 		}
        
 	    public string FixAttr(string field){
