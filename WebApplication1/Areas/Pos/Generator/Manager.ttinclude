@@ -163,11 +163,11 @@ class Manager {
             foreach(var pair in projectFiles)
                 if (!keepFileNames.Contains(pair.Key) && !(Path.GetFileNameWithoutExtension(pair.Key) + ".").StartsWith(originalFilePrefix))
                     pair.Value.Delete();
- 
+			//System.Diagnostics.Debugger.Launch();
             // Add missing files to the project
             foreach(String fileName in keepFileNameSet)
-                if (!projectFiles.ContainsKey(fileName))
-                    templateProjectItem.ProjectItems.AddFromFile(fileName);
+                if (!projectFiles.ContainsKey(fileName)){}
+                    //templateProjectItem.ProjectItems.AddFromFile(fileName);
         }
  
         private void CheckoutFileIfRequired(String fileName) {

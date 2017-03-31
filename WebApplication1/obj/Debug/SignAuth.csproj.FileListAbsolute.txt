@@ -116,3 +116,8 @@ D:\Projects\WebApplication1\WebApplication1\bin\Dapper.dll
 D:\Projects\WebApplication1\WebApplication1\bin\Dapper.xml
 D:\Projects\WebApplication1\WebApplication1\obj\Debug\WebApplication1.Properties.Resources.resources
 D:\Projects\WebApplication1\WebApplication1\obj\Debug\SignAuth.csproj.GenerateResource.Cache
+D:\GitHub\T4-model-posgresql\WebApplication1\obj\Debug\SignAuth.csprojResolveAssemblyReference.cache
+D:\GitHub\T4-model-posgresql\WebApplication1\obj\Debug\WebApplication1.Properties.Resources.resources
+D:\GitHub\T4-model-posgresql\WebApplication1\obj\Debug\SignAuth.csproj.GenerateResource.Cache
+D:\GitHub\T4-model-posgresql\WebApplication1\obj\Debug\WebApplication1.dll
+D:\GitHub\T4-model-posgresql\WebApplication1\obj\Debug\WebApplication1.pdb

@@ -18,10 +18,13 @@
 	ModelManager mmanager = new ModelManager();
 	string tableName="product";
 	DataTable tables = mmanager.GetTable();
+	string solutionsPath = Host.ResolveAssemblyReference("$(SolutionDir)");  
+	string projectPath = Host.ResolveAssemblyReference("$(ProjectDir)");  
     foreach (DataRow item in tables.Rows)
     {
 		string tablename=item["tableName"].ToString();
 		DataTable fields= mmanager.GetColumn(tablename);
+		//manager.StartNewFile(projectPath+"\\Areas\\Pos\\Models\\"+tablename+".cs"); 
 		manager.StartNewFile(tablename+".cs"); 
 #>  
 /* ****************************************************************************************
@@ -43,7 +46,7 @@ using System.Text;
 
 namespace xiaoheng.pos.Model
 {
-    [Serializable]
+   
     /// <summary>
     /// <#= tableName #>
     /// </summary>
@@ -54,11 +57,12 @@ namespace xiaoheng.pos.Model
     foreach(DataRow row in fields.Rows)
     {
     #>
-	/// <summary>
-        /// <#=row["field"]#>
-		/// <#=row["type"]#>
-        /// </summary>
-        public <#=mmanager.TransFromSqlType(row["type"].ToString(),"")#> <#=mmanager.FixField(row["field"].ToString())#> {get;set;}
+		private <#=mmanager.TransFromSqlType(row["type"].ToString(),"")#> <#=mmanager.FixAttr(row["field"].ToString())#>;
+        public <#=mmanager.TransFromSqlType(row["type"].ToString(),"")#> <#=mmanager.FixField(row["field"].ToString())#> 
+		{
+			get {return <#=mmanager.FixAttr(row["field"].ToString())#> };
+			set {<#=mmanager.FixAttr(row["field"].ToString())#> = value; };
+		}
     <#}
     #>
     #endregion
@@ -146,7 +150,10 @@ namespace xiaoheng.pos.Model
             return Query(GET_TABLE,"获取数据库中的表");
         }
 
+		
+
 		public DataTable GetColumn(string tableName){
+			
 			//System.Diagnostics.Debugger.Launch();  
 			//string sql= string.Format(GET_COLUMN,tableName);
 			return Query(GET_COLUMN,"获取指定表的结构");
@@ -180,6 +187,9 @@ namespace xiaoheng.pos.Model
 			return field.Substring(0,1).ToUpper()+field.Substring(1);
 		}
        
+	    public string FixAttr(string field){
+			return "_"+field.Substring(1);
+		}
         /// <summary>
         /// SQL
         /// </summary>

@@ -245,6 +245,9 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Areas\Pos\Models\product.cs" />
+    <Compile Include="Areas\Pos\Models\shop.cs" />
+    <Compile Include="Areas\Pos\Models\Test.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestChargingDataController.cs" />
@@ -264,8 +267,7 @@
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Table.cs" />
-    <Compile Include="xiaoheng.cs">
+    <Compile Include="Areas\Pos\Generator\xiaoheng.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>xiaoheng.tt</DependentUpon>
@@ -366,12 +368,13 @@
     </Content>
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TestClientReferences.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TestClientDialogs.cshtml" />
-    <Content Include="xiaoheng.tt">
+    <Content Include="Areas\Pos\Generator\xiaoheng.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>xiaoheng.cs</LastGenOutput>
       <Parameters>&lt;%3fxml version="1.0" encoding="utf-16"%3f&gt;
 &lt;ArrayOfParameterStorage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" /&gt;</Parameters>
     </Content>
+    <Content Include="Areas\Pos\Generator\Manager.ttinclude" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
