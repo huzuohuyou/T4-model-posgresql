@@ -49,6 +49,18 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\WebApplication1\bin\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="Exceptionless, Version=4.0.1934.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Exceptionless.4.0.1934\lib\net45\Exceptionless.dll</HintPath>
+    </Reference>
+    <Reference Include="Exceptionless.WebApi, Version=4.0.1934.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Exceptionless.WebApi.4.0.1934\lib\net45\Exceptionless.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Exceptionless.WebApi.Signed, Version=4.0.1934.0, Culture=neutral, PublicKeyToken=fc181f0a46f65747, processorArchitecture=MSIL">
+      <HintPath>..\packages\Exceptionless.WebApi.Signed.4.0.1934\lib\net45\Exceptionless.WebApi.Signed.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>

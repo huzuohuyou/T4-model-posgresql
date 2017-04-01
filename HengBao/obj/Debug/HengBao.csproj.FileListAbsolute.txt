@@ -236,3 +236,11 @@ D:\GitHub\T4-model-posgresql\HengBao\bin\zh-Hans\System.Web.Http.Owin.resources.
 D:\GitHub\T4-model-posgresql\HengBao\obj\Debug\HengBao.dll
 D:\GitHub\T4-model-posgresql\HengBao\obj\Debug\HengBao.pdb
 D:\GitHub\T4-model-posgresql\HengBao\bin\HengBao.XML
+D:\GitHub\T4-model-posgresql\HengBao\obj\Debug\HengBao.csprojResolveAssemblyReference.cache
+D:\GitHub\T4-model-posgresql\HengBao\bin\Exceptionless.WebApi.Signed.dll
+D:\GitHub\T4-model-posgresql\HengBao\bin\Exceptionless.WebApi.Signed.xml
+D:\GitHub\T4-model-posgresql\HengBao\bin\Exceptionless.dll
+D:\GitHub\T4-model-posgresql\HengBao\bin\Exceptionless.WebApi.dll
+D:\GitHub\T4-model-posgresql\HengBao\bin\Exceptionless.xml
+D:\GitHub\T4-model-posgresql\HengBao\bin\Exceptionless.WebApi.xml
+D:\GitHub\T4-model-posgresql\HengBao\bin\Exceptionless.Signed.dll
