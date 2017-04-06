@@ -24,7 +24,17 @@ namespace HengBao.Controllers
             this.meta = new Meta(true, OK);
             this.data = data;
         }
-       
+
+        public Response()
+        {
+            this.meta = new Meta(true, OK);
+            this.data = "success";
+        }
+
+        public Response False() {
+            this.meta = new Meta(false, ERROR);
+            return this;
+        }
 
         public class Meta
         {

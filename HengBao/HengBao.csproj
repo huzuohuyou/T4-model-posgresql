@@ -263,6 +263,12 @@
     <Compile Include="Areas\Pos\Models\Product.cs" />
     <Compile Include="Areas\Pos\Models\Shop.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Generator\xiaoheng.cs" />
+    <Compile Include="Controllers\Generator\xiaoheng1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>xiaoheng.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Response.cs" />
     <Compile Include="Controllers\TestController.cs" />
@@ -347,6 +353,10 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="Controllers\Generator\xiaoheng.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>xiaoheng1.cs</LastGenOutput>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -377,6 +387,7 @@
     <Content Include="Areas\Pos\Generator\Manager.ttinclude" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TestClientReferences.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TestClientDialogs.cshtml" />
+    <Content Include="Controllers\Generator\Manager.ttinclude" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -411,6 +422,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="DAL\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

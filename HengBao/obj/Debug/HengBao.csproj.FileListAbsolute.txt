@@ -243,3 +243,4 @@ D:\GitHub\T4-model-posgresql\HengBao\bin\Exceptionless.WebApi.dll
 D:\GitHub\T4-model-posgresql\HengBao\bin\Exceptionless.xml
 D:\GitHub\T4-model-posgresql\HengBao\bin\Exceptionless.WebApi.xml
 D:\GitHub\T4-model-posgresql\HengBao\bin\Dapper.pdb
+D:\GitHub\T4-model-posgresql\HengBao\obj\Debug\HengBao.csprojResolveAssemblyReference.cache
