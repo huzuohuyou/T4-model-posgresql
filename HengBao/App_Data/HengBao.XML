@@ -563,5 +563,65 @@
             type：row["type"].ToString()
             </summary>
         </member>
+        <member name="T:xiaoheng.pos.Model.ProductController">
+            <summary>
+            productController
+            </summary>
+        </member>
+        <member name="M:xiaoheng.pos.Model.ProductController.GetAll">
+            <summary>
+            查询全部实体Product
+            </summary>
+        </member>
+        <member name="M:xiaoheng.pos.Model.ProductController.GetById(System.Int32)">
+            <summary>
+            通过id查询实体Product
+            </summary>
+        </member>
+        <member name="M:xiaoheng.pos.Model.ProductController.Update(xiaoheng.pos.Model.Product)">
+            <summary>
+            更新实体实体Product
+            </summary>
+        </member>
+        <member name="M:xiaoheng.pos.Model.ProductController.Add(xiaoheng.pos.Model.Product)">
+            <summary>
+            新增实体Product
+            </summary>
+        </member>
+        <member name="M:xiaoheng.pos.Model.ProductController.DeleteById(System.Int32)">
+            <summary>
+            删除实体Product
+            </summary>
+        </member>
+        <member name="T:xiaoheng.pos.Model.ShopController">
+            <summary>
+            shopController
+            </summary>
+        </member>
+        <member name="M:xiaoheng.pos.Model.ShopController.GetAll">
+            <summary>
+            查询全部实体Shop
+            </summary>
+        </member>
+        <member name="M:xiaoheng.pos.Model.ShopController.GetById(System.Int32)">
+            <summary>
+            通过id查询实体Shop
+            </summary>
+        </member>
+        <member name="M:xiaoheng.pos.Model.ShopController.Update(xiaoheng.pos.Model.Shop)">
+            <summary>
+            更新实体实体Shop
+            </summary>
+        </member>
+        <member name="M:xiaoheng.pos.Model.ShopController.Add(xiaoheng.pos.Model.Shop)">
+            <summary>
+            新增实体Shop
+            </summary>
+        </member>
+        <member name="M:xiaoheng.pos.Model.ShopController.DeleteById(System.Int32)">
+            <summary>
+            删除实体Shop
+            </summary>
+        </member>
     </members>
 </doc>

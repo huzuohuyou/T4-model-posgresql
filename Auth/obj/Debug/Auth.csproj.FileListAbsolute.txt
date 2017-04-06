@@ -1,0 +1,4 @@
+D:\GitHub\T4-model-posgresql\Auth\bin\Debug\Auth.dll
+D:\GitHub\T4-model-posgresql\Auth\bin\Debug\Auth.pdb
+D:\GitHub\T4-model-posgresql\Auth\obj\Debug\Auth.dll
+D:\GitHub\T4-model-posgresql\Auth\obj\Debug\Auth.pdb

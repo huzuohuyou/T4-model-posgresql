@@ -4,7 +4,7 @@
  * 用    途：控制器
  * 结构组成：
  * 作    者：吴海龙
- * 创建日期：2017-04-06 15:59:24 
+ * 创建日期：2017-04-06 17:32:08 
  * 历史记录：
  * ****************************************************************************************
  * 修改人员：             
@@ -28,7 +28,7 @@ namespace xiaoheng.pos.Model
         #region 方法
    
 		/// <summary>
-		/// 查询全部实体
+		/// 查询全部实体Shop
 		/// </summary>
 		[HttpGet]
         public Response GetAll(){
@@ -36,7 +36,7 @@ namespace xiaoheng.pos.Model
 		}
 
 		/// <summary>
-		/// 通过id查询实体
+		/// 通过id查询实体Shop
 		/// </summary>
 		[HttpGet]
         public Response GetById(int id){
@@ -44,7 +44,7 @@ namespace xiaoheng.pos.Model
 		}
 
 		/// <summary>
-		/// 更新实体实体
+		/// 更新实体实体Shop
 		/// </summary>
 		[HttpPost]
         public Response Update(Shop shop){
@@ -52,7 +52,7 @@ namespace xiaoheng.pos.Model
 		}
 
 		/// <summary>
-		/// 新增实体
+		/// 新增实体Shop
 		/// </summary>
 		[HttpPut]
         public Response Add(Shop shop){
@@ -60,7 +60,7 @@ namespace xiaoheng.pos.Model
 		}
 
 		/// <summary>
-		/// 删除实体实体
+		/// 删除实体Shop
 		/// </summary>
 		[HttpDelete]
         public Response DeleteById(int id){

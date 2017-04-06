@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Exceptionless;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +19,8 @@ namespace HengBao
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            ExceptionlessClient.Default.Configuration.ApiKey = "fPsfg0YN82tzmlKt5LkLmGTeiD67wwV0EIopfzw4";
+            ExceptionlessClient.Default.Configuration.ServerUrl = "http://localhost:8088";
         }
     }
 }

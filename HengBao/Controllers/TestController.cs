@@ -28,8 +28,8 @@ namespace HengBao.Controllers
                 //var product = conn.Query<Product>("select * from product where name = @name", new { name = pname });
                 var myShopProduct = conn.Query("select product.* from product ,shop where product.shopid = shop.id and shop.id = @id", new { id = id });
                 //var result = conn.Execute("Insert into product values (@name, @price, @status)", new { name = pname, price = 998, status = false });
-                //ExceptionlessClient.Default.Configuration.ApiKey = "epMiiNOWHM0XiM5Z60F4htA9agpFfd2pHrJ2WDnj";
-                ExceptionlessClient.Default.CreateLog("Hello", "查询商店产品", LogLevel.Normal.ToString()).Submit();
+                //ExceptionlessClient.Default.Configuration.ApiKey = "fPsfg0YN82tzmlKt5LkLmGTeiD67wwV0EIopfzw4";
+                ExceptionlessClient.Default.CreateLog("Hello", "local Exceptionless", LogLevel.Normal.ToString()).Submit();
                 return new Response(myShopProduct);
             }
             catch (Exception ex)
@@ -48,8 +48,7 @@ namespace HengBao.Controllers
             {
                 IDbConnection conn = new NpgsqlConnection(CONNECTION_STRING);
                 var result = conn.Execute("Insert into product (name, price, status,url,shopid,kind) values (@name, @price, @status,@url,@shopid,@kind)", p);
-                ExceptionlessClient.Default.Configuration.ApiKey = "epMiiNOWHM0XiM5Z60F4htA9agpFfd2pHrJ2WDnj";
-                ExceptionlessClient.Default.CreateLog("Hello", "新增商品", LogLevel.Normal.ToString()).Submit();
+                ExceptionlessClient.Default.CreateLog("Hello", "add product", LogLevel.Normal.ToString()).Submit();
                 return new Response(result);
             }
             catch (Exception ex)

@@ -56,7 +56,7 @@ namespace xiaoheng.pos.Model
         #region 方法
    
 		/// <summary>
-		/// 查询全部实体
+		/// 查询全部实体<#= mmanager.FirstChar2Upper(item["tableName"].ToString()) #>
 		/// </summary>
 		[HttpGet]
         public Response GetAll(){
@@ -64,7 +64,7 @@ namespace xiaoheng.pos.Model
 		}
 
 		/// <summary>
-		/// 通过id查询实体
+		/// 通过id查询实体<#= mmanager.FirstChar2Upper(item["tableName"].ToString()) #>
 		/// </summary>
 		[HttpGet]
         public Response GetById(int id){
@@ -72,7 +72,7 @@ namespace xiaoheng.pos.Model
 		}
 
 		/// <summary>
-		/// 更新实体实体
+		/// 更新实体实体<#= mmanager.FirstChar2Upper(item["tableName"].ToString()) #>
 		/// </summary>
 		[HttpPost]
         public Response Update(<#= mmanager.FirstChar2Upper(item["tableName"].ToString()) #> <#= item["tableName"].ToString() #>){
@@ -80,7 +80,7 @@ namespace xiaoheng.pos.Model
 		}
 
 		/// <summary>
-		/// 新增实体
+		/// 新增实体<#= mmanager.FirstChar2Upper(item["tableName"].ToString()) #>
 		/// </summary>
 		[HttpPut]
         public Response Add(<#= mmanager.FirstChar2Upper(item["tableName"].ToString()) #> <#= item["tableName"].ToString() #>){
@@ -88,7 +88,7 @@ namespace xiaoheng.pos.Model
 		}
 
 		/// <summary>
-		/// 删除实体实体
+		/// 删除实体<#= mmanager.FirstChar2Upper(item["tableName"].ToString()) #>
 		/// </summary>
 		[HttpDelete]
         public Response DeleteById(int id){
